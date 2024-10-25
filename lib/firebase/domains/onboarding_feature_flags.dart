@@ -3,8 +3,10 @@ import 'package:flutter_firebase_feature_flags/firebase/utils/base_feature_flag.
 import 'package:flutter_firebase_feature_flags/firebase/utils/bool_feature_flag.dart';
 
 class OnboardingFeatureFlags extends FeatureFlagDomain {
-  static final enableNewUserFlow =
-      BoolFeatureFlag(key: 'onboarding_enable_new_user_flow');
+  static final enableNewUserFlow = BoolFeatureFlag(
+    key: 'onboarding_enable_new_user_flow',
+    isRealtime: true,
+  );
   static final enableReferrals =
       BoolFeatureFlag(key: 'onboarding_enable_referrals');
 
